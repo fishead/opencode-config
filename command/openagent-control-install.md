@@ -1,9 +1,9 @@
 ---
-description: Install OpenAgentsControl in this project
-agent: OpenAgentsControl Project Manager
+description: Install OpenAgents Control in this project
+agent: OpenAgents Control Project Manager
 ---
 
-Install or bootstrap OpenAgentsControl (AOC) for this project.
+Install or bootstrap OpenAgents Control (AOC) for this project.
 
 Task:
 $ARGUMENTS

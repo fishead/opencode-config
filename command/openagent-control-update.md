@@ -1,9 +1,9 @@
 ---
-description: Update OpenAgentsControl in this project
-agent: OpenAgentsControl Project Manager
+description: Update OpenAgents Control in this project
+agent: OpenAgents Control Project Manager
 ---
 
-Update or upgrade existing OpenAgentsControl setup in this project.
+Update or upgrade existing OpenAgents Control setup in this project.
 
 Task:
 $ARGUMENTS

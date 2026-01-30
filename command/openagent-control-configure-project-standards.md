@@ -1,9 +1,9 @@
 ---
-description: Configure OpenAgentsControl project standards and context
-agent: OpenAgentsControl Project Manager
+description: Configure OpenAgents Control project standards and context
+agent: OpenAgents Control Project Manager
 ---
 
-Configure OpenAgentsControl project standards, context, and coding patterns for this project.
+Configure OpenAgents Control project standards, context, and coding patterns for this project.
 
 Task:
 $ARGUMENTS
