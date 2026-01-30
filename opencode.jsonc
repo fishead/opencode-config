@@ -10,6 +10,40 @@
     }
   },
   "default_agent": "OpenCoder",
+  "instructions": [
+    // Git workflow
+    "CONTRIBUTING.md",
+    "docs/CONTRIBUTING.md",
+    ".github/CONTRIBUTING.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    "docs/COMMIT_CONVENTION.md",
+
+    // Development standards
+    "README.md",
+    "docs/DEVELOPMENT.md",
+    "DEVELOPMENT.md",
+    "docs/CODING_STANDARDS.md",
+    "CODING_STANDARDS.md",
+    "STYLE_GUIDE.md",
+    "docs/STYLE_GUIDE.md",
+    "docs/guidelines.md",
+
+    // Testing
+    "docs/TESTING.md",
+    "TESTING.md",
+    "test/README.md",
+    "tests/README.md",
+
+    // Architecture
+    "docs/ARCHITECTURE.md",
+    "ARCHITECTURE.md",
+    "docs/API.md",
+    "API.md",
+
+    // OpenCode rules
+    "AGENTS.md",
+    ".cursor/rules/*.md"
+  ],
   "permission": {
     "external_directory": {
       "~/.config/opencode/context/**": "allow"
