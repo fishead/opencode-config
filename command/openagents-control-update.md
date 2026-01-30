@@ -1,6 +1,6 @@
 ---
 description: Update OpenAgents Control in this project
-agent: OpenAgents Control Project Manager
+agent: OpenAgents Contro Manager
 ---
 
 Update or upgrade existing OpenAgents Control setup in this project.

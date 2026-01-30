@@ -1,6 +1,6 @@
 ---
 description: Install OpenAgents Control in this project
-agent: OpenAgents Control Project Manager
+agent: OpenAgents Contro Manager
 ---
 
 Install or bootstrap OpenAgents Control (AOC) for this project.
