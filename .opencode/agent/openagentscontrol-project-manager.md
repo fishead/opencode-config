@@ -1,6 +1,6 @@
 ---
 id: openagentscontrol-project-manager
-name: OpenAgentsControlProjectManager
+name: OpenAgentsControl Project Manager
 description: "Project-level assistant to install, update, and configure OpenAgentsControl in this repository."
 mode: all
 temperature: 0.3

@@ -1,6 +1,6 @@
 ---
 description: Configure OpenAgentsControl project standards and context
-agent: OpenAgentsControlProjectManager
+agent: OpenAgentsControl Project Manager
 ---
 
 Configure OpenAgentsControl project standards, context, and coding patterns for this project.
