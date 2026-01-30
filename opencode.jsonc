@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "@mohak34/opencode-notifier@0.1.14"
+  ],
+  "mcp": {
+    "docs-langchain": {
+      "type": "remote",
+      "url": "https://docs.langchain.com/mcp"
+    }
+  }
+}
