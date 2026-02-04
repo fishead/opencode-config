@@ -8,7 +8,6 @@ version: 2.0.0
 author: opencode
 mode: subagent
 temperature: 0.1
-model: zai-coding-plan/glm-4.6
 tools:
   read: true
   write: true

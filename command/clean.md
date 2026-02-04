@@ -1,6 +1,5 @@
 ---
-description: Clean codebase or current working task in focus via Prettier, Import Sorter, ESLint, and TypeScript Compiler
-model: zai-coding-plan/glm-4.5-flash
+description: Clean the codebase or current working task in focus via Prettier, Import Sorter, ESLint, and TypeScript Compiler
 ---
 
 # Code Quality Cleanup

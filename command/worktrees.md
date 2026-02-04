@@ -1,6 +1,5 @@
 ---
 description: Manage git worktrees for parallel development workflows
-model: zai-coding-plan/glm-4.5-flash
 ---
 
 # Git Worktree Management

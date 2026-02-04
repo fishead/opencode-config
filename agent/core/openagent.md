@@ -9,7 +9,6 @@ version: 1.0.0
 author: opencode
 mode: primary
 temperature: 0.2
-model: zai-coding-plan/glm-4.7
 
 # Dependencies
 dependencies:

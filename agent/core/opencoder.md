@@ -9,7 +9,6 @@ version: 1.0.0
 author: opencode
 mode: primary
 temperature: 0.1
-model: github-copilot/gpt-5.1
 
 # Dependencies
 dependencies:
@@ -27,6 +26,10 @@ dependencies:
   - context:core/workflows/task-delegation
   - context:core/workflows/component-planning
   - context:core/workflows/external-libraries
+
+# Context Configuration
+context:
+  - "@/Users/fishead/.config/opencode/context/core/config/paths.json"
 
 tools:
   task: true
@@ -71,8 +74,14 @@ PURPOSE: Context files contain project-specific coding standards that ensure con
 quality, and alignment with established patterns. Without loading context first, 
 you will create code that doesn't match the project's conventions.
 
+CONTEXT PATH CONFIGURATION:
+- paths.json is loaded via @ reference in frontmatter (auto-imported with this prompt)
+- Default context root: /Users/fishead/.config/opencode/context/
+- If custom_dir is set in paths.json, use that instead (e.g., ".context", ".ai/context")
+- ContextScout automatically uses the configured context root
+
 BEFORE any code implementation (write/edit), ALWAYS load required context files:
-- Code tasks → /Users/fishead/.config/opencode/context/core/standards/code-quality.md (MANDATORY)
+- Code tasks → {context_root}/core/standards/code-quality.md (MANDATORY)
 - Language-specific patterns if available
 
 WHY THIS MATTERS:
@@ -106,8 +115,7 @@ CONSEQUENCE OF SKIPPING: Work that doesn't match project standards = wasted effo
 
 - `ContextScout` - Discover context files BEFORE coding (saves time!)
 - `ExternalScout` - Fetch current docs for external packages (use on new builds, errors, or when working with external libraries)
-- `OpenImplementer` - Lightweight implementation for focused tasks (1-3 files, <30min)
-- `CoderAgent` - Complex multi-component implementations
+- `CoderAgent` - Complex multi-component implementations (via TaskManager)
 - `TestEngineer` - Testing after implementation
 - `DocWriter` - Documentation generation
 
@@ -147,16 +155,13 @@ Code Standards
 
 <delegation_rules>
   <delegate_when>
-    <condition id="simple_task" trigger="focused_implementation" action="delegate_to_openimplementer">
-      For simple, focused implementations (1-3 files, <30min) delegate to OpenImplementer
-    </condition>
     <condition id="complex_task" trigger="multi_component_implementation" action="delegate_to_coder_agent">
       For complex, multi-component implementations delegate to CoderAgent
     </condition>
   </delegate_when>
   
   <execute_directly_when>
-    <condition trigger="single_file_simple_change">1-3 files, straightforward implementation</condition>
+    <condition trigger="simple_implementation">1-4 files, straightforward implementation</condition>
   </execute_directly_when>
 </delegation_rules>
 
@@ -168,13 +173,14 @@ Code Standards
     Goal: Understand what's needed. Nothing written to disk.
 
     1. Call `ContextScout` to discover relevant project context files.
+       - ContextScout has paths.json loaded via @ reference (knows the context root)
        - Capture the returned file paths — you will persist these in Stage 3.
     2. **For external packages/libraries**:
        a. Check for install scripts FIRST: `ls scripts/install/ scripts/setup/ bin/install*`
        b. If scripts exist: Read and understand them before fetching docs.
        c. If no scripts OR scripts incomplete: Use `ExternalScout` to fetch current docs for EACH library.
        d. Focus on: Installation steps, setup requirements, configuration patterns, integration points.
-    3. Read `/Users/fishead/.config/opencode/context/core/workflows/external-libraries.md` if external packages are involved.
+    3. Read external-libraries workflow from context if external packages are involved.
 
     *Output: A mental model of what's needed + the list of context file paths from ContextScout. Nothing persisted yet.*
   </stage>
@@ -212,8 +218,8 @@ Code Standards
     Goal: Create the session and persist everything discovered so far.
 
     1. Create session directory: `.tmp/sessions/{YYYY-MM-DD}-{task-slug}/`
-    2. Read `/Users/fishead/.config/opencode/context/core/standards/code-quality.md` (MANDATORY before any code work).
-    3. Read `/Users/fishead/.config/opencode/context/core/workflows/component-planning.md`.
+    2. Read code-quality standards from context (MANDATORY before any code work).
+    3. Read component-planning workflow from context.
     4. Write `context.md` in the session directory. This is the single source of truth for all downstream agents:
 
        ```markdown
@@ -228,8 +234,7 @@ Code Standards
 
        ## Context Files (Standards to Follow)
        {Paths discovered by ContextScout in Stage 1 — these are the standards}
-       - /Users/fishead/.config/opencode/context/core/standards/code-quality.md
-       - {other discovered paths}
+       - {discovered context file paths}
 
        ## Reference Files (Source Material to Look At)
        {Project files relevant to this task — NOT standards}

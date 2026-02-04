@@ -1,6 +1,5 @@
 ---
 description: Create well-formatted commits with conventional commit messages and emoji
-model: github-copilot/gpt-5.1
 ---
 
 # Commit Command

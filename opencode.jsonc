@@ -1,12 +1,21 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
+    "opencode-antigravity-auth@latest",
     "@mohak34/opencode-notifier@0.1.14"
   ],
   "mcp": {
     "docs-langchain": {
       "type": "remote",
       "url": "https://docs.langchain.com/mcp"
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
     }
   },
   "default_agent": "OpenCoder",
@@ -17,7 +26,6 @@
     ".github/CONTRIBUTING.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
     "docs/COMMIT_CONVENTION.md",
-
     // Development standards
     "README.md",
     "docs/DEVELOPMENT.md",
@@ -27,29 +35,31 @@
     "STYLE_GUIDE.md",
     "docs/STYLE_GUIDE.md",
     "docs/guidelines.md",
-
     // Testing
     "docs/TESTING.md",
     "TESTING.md",
     "test/README.md",
     "tests/README.md",
-
     // Architecture
     "docs/ARCHITECTURE.md",
     "ARCHITECTURE.md",
     "docs/API.md",
     "API.md",
-
     // OpenCode rules
     "AGENTS.md",
     ".cursor/rules/*.md"
   ],
   "permission": {
     "external_directory": {
-      "~/.config/opencode/context/**": "allow"
+      "~/.config/opencode/**": "allow",
+      "/tmp/**": "allow"
     },
     "read": {
-      "~/.config/opencode/context/**": "allow"
+      "~/.config/opencode/**": "allow",
+      "/tmp/**": "allow"
+    },
+    "write": {
+      "/tmp/**": "allow"
     }
   }
 }

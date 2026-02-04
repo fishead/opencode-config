@@ -9,7 +9,6 @@ version: 2.0.0
 author: opencode
 mode: primary
 temperature: 0.2
-model: github-copilot/gpt-5.1
 tools:
   read: true
   write: true

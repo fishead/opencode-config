@@ -7,7 +7,6 @@ tags:
 dependencies:
   - subagent:context-organizer
   - subagent:contextscout
-model: zai-coding-plan/glm-4.7-flash
 ---
 
 # Context Manager

@@ -5,7 +5,6 @@ description: "Analyze codebase for patterns and similar implementations"
 type: command
 category: analysis
 version: 1.0.0
-model: github-copilot/gpt-5.1
 ---
 
 # Command: analyze-patterns
@@ -93,7 +92,7 @@ Quality Insights:
 ## Implementation
 
 ### Delegation
-- Delegates to: **opencoder** (primary) or **openimplementer** (fallback)
+- Delegates to: **opencoder** (primary)
 - Uses context search capabilities for pattern matching
 - Returns structured pattern analysis results
 
@@ -187,7 +186,7 @@ Formatted for documentation + sharing:
   "type": "command",
   "category": "analysis",
   "description": "Analyze codebase for patterns and similar implementations",
-  "delegates_to": ["opencoder", "openimplementer"],
+  "delegates_to": ["opencoder"],
   "parameters": ["pattern", "language", "depth", "output"]
 }
 ```

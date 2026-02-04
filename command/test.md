@@ -1,6 +1,5 @@
 ---
 description: Run the complete testing pipeline
-model: zai-coding-plan/glm-4.5-flash
 ---
 
 # Testing Pipeline

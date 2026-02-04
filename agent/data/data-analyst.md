@@ -8,7 +8,6 @@ version: 1.0.0
 author: community
 mode: primary
 temperature: 0.1
-model: zai-coding-plan/glm-4.7
 
 # Tags
 tags:

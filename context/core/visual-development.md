@@ -13,9 +13,9 @@
 | **Edit existing image** | This file | Image Specialist | tool:gemini |
 | **UI mockup (static)** | This file | Image Specialist | tool:gemini |
 | **Interactive UI design** | `workflows/design-iteration.md` | - | - |
-| **Design system** | `development/design-systems.md` | - | - |
-| **UI standards** | `development/ui-styling-standards.md` | - | - |
-| **Animation patterns** | `development/animation-patterns.md` | - | - |
+| **Design system** | `ui/web/design-systems.md` | - | - |
+| **UI standards** | `ui/web/ui-styling-standards.md` | - | - |
+| **Animation patterns** | `ui/web/animation-patterns.md` | - | - |
 
 ---
 
@@ -448,9 +448,9 @@ After receiving output:
 ## Related Context
 
 - **UI Design Workflow**: `/Users/fishead/.config/opencode/context/core/workflows/design-iteration.md`
-- **Design Systems**: `/Users/fishead/.config/opencode/context/development/design-systems.md`
-- **UI Styling Standards**: `/Users/fishead/.config/opencode/context/development/ui-styling-standards.md`
-- **Animation Patterns**: `/Users/fishead/.config/opencode/context/development/animation-patterns.md`
+- **Design Systems**: `/Users/fishead/.config/opencode/context/ui/web/design-systems.md`
+- **UI Styling Standards**: `/Users/fishead/.config/opencode/context/ui/web/ui-styling-standards.md`
+- **Animation Patterns**: `/Users/fishead/.config/opencode/context/ui/web/animation-patterns.md`
 - **Subagent Invocation Guide**: `/Users/fishead/.config/opencode/context/openagents-repo/guides/subagent-invocation.md`
 - **Agent Capabilities**: `/Users/fishead/.config/opencode/context/openagents-repo/core-concepts/agents.md`
 

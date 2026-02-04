@@ -8,7 +8,6 @@ version: 1.0.0
 author: opencode
 mode: subagent
 temperature: 0.2
-model: github-copilot/gemini-3-flash-preview
 
 # Tags
 tags:

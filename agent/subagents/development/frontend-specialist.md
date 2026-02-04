@@ -7,7 +7,6 @@ category: development
 version: 2.0.0
 mode: subagent
 temperature: 0.2
-model: github-copilot/gpt-4.1
 tools:
   read: true
   write: true

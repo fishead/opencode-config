@@ -8,7 +8,6 @@ tags:
   - openagents
 dependencies:
   - command:analyze-patterns
-model: zai-coding-plan/glm-4.7-flash
 ---
 
 # Check Context Dependencies

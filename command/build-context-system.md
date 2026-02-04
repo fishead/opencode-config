@@ -1,6 +1,5 @@
 ---
 description: "Interactive system builder that creates complete context-aware AI architectures tailored to user domains"
-model: github-copilot/gpt-5.2
 ---
 
 <target_domain> $ARGUMENTS </target_domain>

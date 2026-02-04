@@ -1,6 +1,5 @@
 ---
 description: Analyze and optimize code for performance, security, and potential issues
-model: github-copilot/gpt-5.1
 ---
 
 # Code Optimization Analysis

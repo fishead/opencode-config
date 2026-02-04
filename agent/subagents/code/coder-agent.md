@@ -8,7 +8,6 @@ version: 2.0.0
 author: opencode
 mode: subagent
 temperature: 0
-model: github-copilot/gpt-5.1-codex
 tools:
   read: true
   edit: true

@@ -1,6 +1,5 @@
 ---
 description: "Research-backed prompt optimizer applying Stanford/Anthropic patterns with model- and task-specific effectiveness improvements"
-model: github-copilot/gpt-5.2
 ---
 
 <target_file> $ARGUMENTS </target_file>
