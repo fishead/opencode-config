@@ -16,6 +16,10 @@
         "-y",
         "chrome-devtools-mcp@latest"
       ]
+    },
+    "docs-fastmcp": {
+      "type": "remote",
+      "url": "https://gofastmcp.com/mcp"
     }
   },
   "default_agent": "OpenCoder",
